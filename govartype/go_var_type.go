@@ -1,4 +1,4 @@
-package gotvarype
+package govartype
 
 import (
 	"fmt"
