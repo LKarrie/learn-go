@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
+	"learn-go/goarray"
 	"learn-go/goif"
 	"learn-go/goloop"
 	"learn-go/gooperator"
 	"learn-go/goplaceholder"
+	"learn-go/goslice"
 	"learn-go/gostring"
 	"learn-go/goswitch"
 	"learn-go/govar"
@@ -56,4 +58,13 @@ func main() {
 	main8 := goloop.GoLoop()
 	fmt.Printf("main8: %v\n", main8)
 
+	fmt.Printf("------------GoArray------------\n")
+	//go中的数组 访问数组 和 遍历数组
+	main9 := goarray.GoArray()
+	fmt.Printf("main9: %v\n", main9)
+
+	fmt.Printf("------------GoSlice------------\n")
+	//go中的切片 切片的长度和容量 切片的初始化 空切片 切片的遍历
+	main10 := goslice.GoSlice()
+	fmt.Printf("main10: %v\n", main10)
 }
