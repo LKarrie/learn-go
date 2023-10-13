@@ -3,12 +3,18 @@ package main
 import (
 	"fmt"
 	"learn-go/goarray"
+	"learn-go/godefer"
+	"learn-go/gofunc"
 	"learn-go/goif"
+	"learn-go/goinit"
 	"learn-go/goloop"
+	"learn-go/gomap"
 	"learn-go/gooperator"
 	"learn-go/goplaceholder"
+	"learn-go/gopointer"
 	"learn-go/goslice"
 	"learn-go/gostring"
+	"learn-go/gostruct"
 	"learn-go/goswitch"
 	"learn-go/govar"
 	"learn-go/govartype"
@@ -54,7 +60,7 @@ func main() {
 	fmt.Printf("main7: %v\n", main7)
 
 	fmt.Printf("------------GoLoop------------\n")
-	//go中的for和range循环 循环中的break和goto
+	//go中的for和range循环 循环中的break和goto 递归
 	main8 := goloop.GoLoop()
 	fmt.Printf("main8: %v\n", main8)
 
@@ -67,4 +73,34 @@ func main() {
 	//go中的切片 切片的长度和容量 切片的初始化 空切片 切片的遍历
 	main10 := goslice.GoSlice()
 	fmt.Printf("main10: %v\n", main10)
+
+	fmt.Printf("------------GoMap------------\n")
+	//go中的Map 判断Map键是否存在 遍历Map的key和value
+	main11 := gomap.GoMap()
+	fmt.Printf("main11: %v\n", main11)
+
+	fmt.Printf("------------GoFunc------------\n")
+	//go中的函数 函数类型 函数的返回值 函数的参数 函数类型和函数变量(函数作为参数) 函数做返回值 匿名函数 闭包
+	main12 := gofunc.GoFunc()
+	fmt.Printf("main12: %v\n", main12)
+
+	fmt.Printf("------------GoDefer------------\n")
+	//go中的defer语句
+	main13 := godefer.GoDefer()
+	fmt.Printf("main13: %v\n", main13)
+
+	fmt.Printf("------------GoInit------------\n")
+	//go中的init语句
+	main14 := goinit.GoInit()
+	fmt.Printf("main14: %v\n", main14)
+
+	fmt.Printf("------------GoPointer------------\n")
+	//go中的指针 指向数组的指针
+	main15 := gopointer.GoPointer()
+	fmt.Printf("main15: %v\n", main15)
+
+	//go中的结构体
+	main16 := gostruct.GoStruct()
+	fmt.Printf("main16: %v\n", main16)
+
 }

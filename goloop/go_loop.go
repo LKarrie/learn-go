@@ -78,6 +78,21 @@ MY_LABEL:
 LABEL1:
 	fmt.Println("label1")
 
+	// 递归
+	n := 5
+	r := aa(n)
+	fmt.Printf("r: %v\n", r)
+
 	return "learn-go-goloop"
 
+}
+
+func aa(n int) int {
+	// 返回条件
+	if n == 1 {
+		return 1
+	} else {
+		// 自己调用自己
+		return n * aa(n-1)
+	}
 }
