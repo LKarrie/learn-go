@@ -22,12 +22,16 @@ import (
 	"learn-go/basic/goswitch"
 	"learn-go/basic/govar"
 	"learn-go/basic/govartype"
+	"learn-go/concurrency/gochannel"
 	"learn-go/concurrency/gogoroutines"
+	"learn-go/concurrency/gomutex"
+	"learn-go/concurrency/goruntime"
+	"learn-go/concurrency/gowaitgroup"
 )
 
 func main() {
 	// 基础
-	gobasic()
+	// gobasic()
 	// 并发编程
 	goconcurrency()
 }
@@ -117,6 +121,20 @@ func gobasic() {
 }
 
 func goconcurrency() {
+	fmt.Printf("------------GoGoroutines------------\n")
 	// 协程
 	gogoroutines.GoGoroutines()
+	fmt.Printf("------------GoChannel------------\n")
+	// channel通道 channel遍历
+	gochannel.GoChannel()
+	fmt.Printf("------------GoWaitGroup------------\n")
+	// WaitGroup同步
+	gowaitgroup.GoWaitGroup()
+	fmt.Printf("------------GoRuntime------------\n")
+	// runtime包中的一些方法
+	goruntime.GoRuntime()
+	fmt.Printf("------------GoMutex------------\n")
+	// mutex包中lock实现同步
+	gomutex.GoMutex()
+
 }
