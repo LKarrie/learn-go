@@ -26,6 +26,9 @@ import (
 	"learn-go/concurrency/gogoroutines"
 	"learn-go/concurrency/gomutex"
 	"learn-go/concurrency/goruntime"
+	"learn-go/concurrency/goselect"
+	"learn-go/concurrency/goticker"
+	"learn-go/concurrency/gotimer"
 	"learn-go/concurrency/gowaitgroup"
 )
 
@@ -136,5 +139,13 @@ func goconcurrency() {
 	fmt.Printf("------------GoMutex------------\n")
 	// mutex包中lock实现同步
 	gomutex.GoMutex()
-
+	fmt.Printf("------------GoSelect------------\n")
+	// GoSelect 类似switch 监听channel读写
+	goselect.GoSelect()
+	fmt.Printf("------------GoTimer------------\n")
+	// GoTimer 定时器
+	gotimer.GoTimer()
+	fmt.Printf("------------GoTicker------------\n")
+	// GoTicker 周期执行
+	goticker.GoTicker()
 }
