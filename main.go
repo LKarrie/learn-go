@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"learn-go/basic"
 	"learn-go/concurrency"
+	"learn-go/goio"
+	"learn-go/golog"
 	"learn-go/goos"
 )
 
@@ -14,7 +16,11 @@ func main() {
 	// goconcurrency()
 	// 标准库
 	// os 包
-	os()
+	// os()
+	// io 包
+	// io()
+	// log 包
+	log()
 }
 
 func gobasic() {
@@ -145,4 +151,16 @@ func os() {
 	// goos.GoProcess()
 	fmt.Printf("------------GoEnv------------\n")
 	goos.GoEnv()
+}
+
+func io() {
+	fmt.Printf("------------GoIo------------\n")
+	// io 基础操作
+	goio.GoIo()
+}
+
+func log() {
+	fmt.Printf("------------GoLog------------\n")
+	// 基础日志配置
+	golog.GoLog()
 }
