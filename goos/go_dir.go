@@ -1,4 +1,4 @@
-package os
+package goos
 
 import (
 	"fmt"
@@ -8,12 +8,12 @@ import (
 // 创建目录
 func createDir() {
 	// 创建单个目录
-	err := os.Mkdir("./os/test", os.ModePerm)
+	err := os.Mkdir("./goos/test", os.ModePerm)
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 	}
 
-	err = os.MkdirAll("./os/test/a/b", os.ModePerm)
+	err = os.MkdirAll("./goos/test/a/b", os.ModePerm)
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 	}
@@ -21,7 +21,7 @@ func createDir() {
 
 // 删除目录 会删除目录下的所有目录和内容
 func removeDir() {
-	err := os.RemoveAll("./os/test")
+	err := os.RemoveAll("./goos/test")
 	if err != nil {
 		fmt.Printf("err: %v\n", err)
 	}

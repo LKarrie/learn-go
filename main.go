@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"learn-go/basic"
 	"learn-go/concurrency"
-	"learn-go/os"
+	"learn-go/goos"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 	// goconcurrency()
 	// 标准库
 	// os 包
-	goos()
+	os()
 }
 
 func gobasic() {
@@ -131,11 +131,18 @@ func goconcurrency() {
 	concurrency.GoAtomic()
 }
 
-func goos() {
+func os() {
 	fmt.Printf("------------GoFile------------\n")
 	// 文件操作
-	os.GoFile()
+	// goos.GoFile()
+	// goos.GoFileWrite()
+	// goos.GoFileRead()
 	fmt.Printf("------------GoDir------------\n")
 	// 文件夹操作
-	os.GoDir()
+	// goos.GoDir()
+	fmt.Printf("------------GoProcess------------\n")
+	// 进程操作
+	// goos.GoProcess()
+	fmt.Printf("------------GoEnv------------\n")
+	goos.GoEnv()
 }
